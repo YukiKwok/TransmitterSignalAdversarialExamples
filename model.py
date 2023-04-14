@@ -66,9 +66,9 @@ class ResidualStack(nn.Module):
         return x
 
 
-class ConnectedModel_10nofc_2fc(nn.Module):
+class ConnectedModel(nn.Module):
     def __init__(self, residualstack=ResidualStack, blocks_num=6):
-        super(ConnectedModel_10nofc_2fc, self).__init__()
+        super(ConnectedModel, self).__init__()
         # ChanNet
         self.conv1 = nn.Conv2d(1, 1, (1, 16), padding=(0, 8))
         self.conv2 = nn.Conv2d(1, 1, (1, 16), padding=(0, 4))
